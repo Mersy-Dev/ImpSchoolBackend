@@ -15,11 +15,6 @@ dotenv.config();
 
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
-app.use(cors({
-    origin: 'https://imp-school-management.netlify.app', // Replace with your frontend's URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add other HTTP methods if necessary
-    allowedHeaders: ['Content-Type', 'Authorization'] // Add headers as needed.
-}));
 
 mongoose
     .connect(process.env.MONGO_URL, {

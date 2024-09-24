@@ -2,7 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
-// const bodyParser = require("body-parser")
+const bodyParser = require("body-parser")
 const app = express()
 const Routes = require("./routes/route.js")
 
@@ -25,6 +25,7 @@ mongoose
     .catch((err) => console.log("NOT CONNECTED TO NETWORK", err))
 
 app.use('/', Routes);
+//like
 
 app.listen(PORT, () => {
     console.log(`Server started at port no. ${PORT}`)
